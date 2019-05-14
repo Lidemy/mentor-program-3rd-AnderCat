@@ -17,7 +17,11 @@ function getStreams() {
   },
   (error, response, body) => {
     const games = JSON.parse(body);
-    console.log(`${gameName}最受歡迎的前 100 名實況台`);
+    if (gameId === 'undefined') {
+      console.log('請輸入想要查詢的正確遊戲名稱');
+    } else {
+      console.log(`${gameName}最受歡迎的前 100 名實況台`);
+    }
     games.data.forEach(game => console.log(`ID:${game.id} 標題:${game.title}`));
   });
 }
