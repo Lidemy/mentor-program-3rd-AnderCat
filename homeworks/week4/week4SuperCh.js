@@ -43,6 +43,6 @@ request.get({
 },
 (error, response, body) => {
   const games = JSON.parse(body);
-  gameId += games.data.map(game => game.id)[0];
+  [gameId] = games.data.map(game => game.id);
   getStreams();
 });
