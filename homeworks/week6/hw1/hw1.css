@@ -1,0 +1,85 @@
+body {
+	margin: 0;
+}
+nav {
+	background: #587482;
+}
+
+.navTitle {
+	color: white;
+	display: inline-block;
+	padding: 10px;
+	font-size: 22px;
+}
+
+.navText {
+	display: inline-block;
+	font-size: 20px;
+	cursor:pointer;
+	padding: 5px;
+}
+nav > div > a {
+    color:#b1b1b1;
+    margin:5px;
+}
+.navTitle:hover{
+	cursor: pointer;
+}
+div a:hover{
+	color:white;
+	cursor: pointer;
+}
+.header {
+	background: #c0eaea;
+}
+p {
+	display: block;
+	font-size: 20px;
+
+}
+.title h1{
+	font-size: 70px;
+	margin: 0px;
+}
+.headerbutton {
+	font-size: 24px;
+	background: #4ebeff;
+	color: white;
+	padding:15px 30px;
+	border: none;
+	border-radius: 5%;
+	text-align: center;
+	display: inline-block;
+}
+
+.header button:hover{
+	cursor: pointer;
+}
+.bodybutton{
+	background: #6c7979;
+	font-size: 20px;
+	color: white;
+	padding: 10px 20px; 
+	border: none;
+	border-radius: 5%;
+	display: inline-block;
+
+}
+.bodytext{
+	padding-top: 30px;
+	display: inline-block;
+	max-width: 33%;
+	padding-bottom: 50px;
+}
+.bodyAll{
+	padding: 0px;
+}
+footer{
+	border-top: 1px solid #E3E3E3;
+	padding: 20px;
+}
+.wrapper{
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 40px 25px;
+}
