@@ -24,7 +24,8 @@ static 是網頁預設的定位方式，是透過盒模型以及 display 來決�
 
 relative 則是根據 static 以及 四個方向(top bottom left right) 來決定下一個元素應該要畫在哪裡。
 
-absolute 要在一個元素裡寫 position:relative 來當作 absolute 的參考點，之後的元素就可以根據這個參考點來設置下一個元素要畫哪。
+absolute 會把這個元素的上層'非 static'元素當 absolute 的參考點，如果上層的元素都是 static ，則根據 body 來當參考點。
+// 原本只寫 relative 可以當參考點，感謝老師修正。
 
 fixed 根據 view port 來做定位，不會因為上下左右滾動而改變位置。
 

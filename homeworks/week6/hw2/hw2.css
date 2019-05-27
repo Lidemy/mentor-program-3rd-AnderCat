@@ -10,7 +10,7 @@ body {
 	font-size: 50px;
 	margin:40px 0px;
 }
-.bodyText{
+.body-text{
 	font-size: 20px;
 }
 .clap{
@@ -26,12 +26,12 @@ body {
 	cursor: pointer;
 	border-color: black;
 }
-.clapImg{
+.clap-img{
 	position: absolute;
 	top:30px;
 	left: 20px;
 }
-.clapText{
+.clap-text{
 	position: absolute;
 	top:10px;
 	left: 20px;
