@@ -5,14 +5,14 @@ nav {
 	background: #587482;
 }
 
-.navTitle {
+.nav-title {
 	color: white;
 	display: inline-block;
 	padding: 10px;
 	font-size: 22px;
 }
 
-.navText {
+.nav-text {
 	display: inline-block;
 	font-size: 20px;
 	cursor:pointer;
@@ -22,7 +22,7 @@ nav > div > a {
     color:#b1b1b1;
     margin:5px;
 }
-.navTitle:hover{
+.nav-title:hover{
 	cursor: pointer;
 }
 div a:hover{
@@ -41,7 +41,7 @@ p {
 	font-size: 70px;
 	margin: 0px;
 }
-.headerbutton {
+.header-button {
 	font-size: 24px;
 	background: #4ebeff;
 	color: white;
@@ -55,7 +55,7 @@ p {
 .header button:hover{
 	cursor: pointer;
 }
-.bodybutton{
+.body-button{
 	background: #6c7979;
 	font-size: 20px;
 	color: white;
@@ -65,13 +65,13 @@ p {
 	display: inline-block;
 
 }
-.bodytext{
+.body-text{
 	padding-top: 30px;
 	display: inline-block;
-	max-width: 33%;
+	max-width: 32%;
 	padding-bottom: 50px;
 }
-.bodyAll{
+.body-all{
 	padding: 0px;
 }
 footer{
