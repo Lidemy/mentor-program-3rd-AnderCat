@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./hw2.css">
+	<script type="text/javascript" async src="./hw2.js"></script>
+	<title>hw2 仿 google 表單</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="top-background"></div>
+		<div class="bot-background">
+			<form class="body">
+				<div class="title">
+					程式導師實驗計畫第三期報名表單
+				</div>
+				<div class="form-small-text">
+					詳情請參考：
+					<a href="https://medium.com/@hulitw/mentor-program-b5f96ae1eed1 ">
+					https://medium.com/@hulitw/mentor-program-b5f96ae1eed1		
+					<br></a>
+					記得填完表單之後還要寫信報名才算成功，兩者缺一不可！
+					<p class="red">*必填</p>
+				</div>
+				<div class="form-content-text" id="content1">
+					<div class="form-text">
+						電子郵件地址
+						<span class="red">*</span><br><br>
+						<input name="email" placeholder="你的電子郵件" class="input" id="input1">
+					</div>
+					<div class="necessary" id="necessary1">這是必填問題</div>
+				</div>
+				<div class="form-content-text" id="content2">
+					<div class="form-text">
+						暱稱<span class="red">*</span>
+						<p class="form-content-small-text">該怎麼稱呼你</p>
+						<input name="name" placeholder="您的回答" class="input" id="input2">
+					</div>
+					<div class="necessary" id="necessary2">這是必填問題</div>
+				</div>
+				<div class="form-content-text" id="content3">
+					<div class="form-text">
+						報名類型
+						<span class="red">*</span><br><br>
+						<input name="type" type="radio" class="toggle" id="type1">
+						<label class="label">工程師培養班（每週付出四十小時，從零培養到工程師，學費是一個月薪水）</label><br><br>
+						<input name="type" type="radio" class="toggle" id="type2">
+						<label class="label">業餘班（依照個人目標訂立學習計畫，學費一萬五千元）</label>
+					</div>
+					<div class="necessary" id="necessary3">這是必填問題</div>
+				</div>
+				<div class="form-content-text" id="content4">
+					<div class="form-text">
+						是否有程式相關背景？
+						<span class="red">*</span>
+						<br>
+						<p class="form-content-small-text">範例：無、高中時候學過C++、學過一點網頁前端、目前在資策會上課...</p>
+						<input name="basic" placeholder="您的回答" class="input" id="input4">
+					</div>
+					<div class="necessary" id="necessary4">這是必填問題</div>
+				</div>
+				<div class="form-content-text">
+					<div class="form-text">
+						其他
+						<p class="form-content-small-text">其他任何你想講的</p>
+						<input name="other" placeholder="您的回答" class="input">
+					</div>
+				</div>
+				<input type="submit" class="btn"></input>
+			</form>
+		</div>
+		
+
+		<div></div>
+	</div>
+</body>
+</html>
