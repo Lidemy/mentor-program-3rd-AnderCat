@@ -1,0 +1,42 @@
+html{
+	margin: 0px;
+	font-family: '微軟正黑體';
+}
+.body{
+	border:0.1px solid #80808061;
+	margin:100px auto;
+	padding: 10px ;
+	width: 400px;
+}
+.output{
+	border:0.1px solid #80808061;
+	padding: 5px 5px;
+	font-size: 46px;
+	text-align: right;
+}
+.row button{
+	border:0.1px solid #80808061;
+	font-size: 20px;
+	width: 96px;
+	height: 50px;
+
+}
+.row{
+	display: flex;
+	justify-content: space-between;
+	margin:5px 0px;
+}
+.equal{
+	width: 200px!IMPORTANT;
+	background: orange;
+}
+.row button:hover{
+	cursor: pointer;
+	border:0.1px solid black;
+}
+.number{
+	background: white;
+}
+.point{
+	background: white;
+}

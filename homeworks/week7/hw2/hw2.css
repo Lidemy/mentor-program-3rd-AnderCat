@@ -1,0 +1,77 @@
+body,.wrapper{
+	margin: 0px ;
+	font-family: 微軟正黑體
+}
+.top-background{
+	background: url(./img.jpg) no-repeat bottom center;
+	background-size: cover;
+	height:280px;
+	width: 100%;
+}
+.bot-background{
+	background: #f8dde27a;
+	height: 60%;
+	width: 100%;
+}
+.body{
+	background: white;
+	position: relative;
+	top:-50px;
+	padding: 0px 10px;
+	margin: auto;
+	max-width: 640px;
+	border-top: 15px solid #bfc92a;
+}
+.title{
+	padding:30px 50px;
+	font-size: 35px;
+	text-align: center;
+
+}
+.form-small-text{
+	font-size: 12px;
+	padding: 10px 50px;
+}
+.red{
+	color: red;
+}
+.form-text{
+	font-size: 18px;
+	padding-bottom: 15px;
+
+}
+.input{
+	border:none;
+	border-bottom: 0.1px solid gray;
+	width: 60%;
+	padding: 5px 0px;
+}
+.form-content-text{
+	padding: 20px 40px;
+	margin: 10px;
+}
+.form-content-small-text{
+	font-size: 12px;
+	margin-top: 0px;
+}
+.label{
+	margin: 50px 10px;
+}
+.toggle:hover{
+	cursor: pointer;
+}
+.btn {
+	border:none;
+	border-radius: 5%;
+	background: blue;
+	color: white;
+	padding: 10px 30px;
+	margin: 20px 50px;
+}
+.btn:hover{
+	cursor: pointer;
+}
+.necessary{
+	color: rgba(0,0,0,0);
+	
+}
