@@ -31,22 +31,14 @@ function clickAgain() {
   game = false;
 }
 function scoreCal(scoreTime) {
-  if (score.length < 3) {
-    score.push(scoreTime);
-    score.sort((a, b) => a - b);
-    if (score.length === 1) {
-      scoreArr.innerText = `1. ${score[0]} 秒`;
-    } else if (score.length === 2) {
-      scoreArr.innerText = `1. ${score[0]} 秒 \n 2. ${score[1]} 秒`;
-    } else {
-      scoreArr.innerText = `1. ${score[0]} 秒 \n 2. ${score[1]} 秒 \n 3. ${score[2]} 秒`;
-    }
-  } else {
-    if (score[2] > scoreTime) {
-      score[2] = scoreTime;
-      score.sort((a, b) => a - b);
-    }
-    scoreArr.innerText = `1.${score[0]} 秒 \n 2.${score[1]} 秒 \n 3.${score[2]} 秒`;
+  score.push(scoreTime);
+  score.sort((a, b) => a - b);
+  scoreArr.innerText = '';
+  if (score.length > 3) {
+    score.pop(-1);
+  }
+  for (let i = 0; i < score.length; i += 1) {
+    scoreArr.innerText += `${i + 1}. ${score[i]} 秒 \n`;
   }
 }
 function clickItem() {
