@@ -1,0 +1,59 @@
+html{
+	background: url('./yumi.jpg') no-repeat center fixed;
+	background-size: cover;
+	font-family: '微軟正黑體';
+	color: white;
+}
+.title{
+	font-size: 4em;
+    text-align: center;
+    margin: 100px auto;
+    color: blue;
+    font-weight: bold;
+}
+.wrapper{
+	display: grid;
+}
+.stream-title{
+	color: white;
+}
+.img{
+	display: block;
+    width: 3em;
+    height: 3em;
+
+}
+.stream-title{
+    display: flex;
+    height: 3em;
+    width: 28.5em;
+    position: relative;
+    margin-top: -0.25em;
+    background: #0000006e;
+}
+.stream-name{
+	margin: 5px;
+    line-height: 1.5em;
+    font-size: 0.8em;
+    position: absolute;
+    left: 4em;
+}
+.box{
+	white-space: nowrap;
+    overflow: hidden;
+    background-size: cover;
+    display: inline-table;
+    width: 25%;
+    border: 1px solid black;
+    margin: 10px 1%;
+    height: 80px;
+}
+.box:hover{
+	transform: scale(1.1);
+	background: white;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.preview{
+	width: 100%;
+}

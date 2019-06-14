@@ -1,0 +1,45 @@
+html{
+	margin: 0px;
+	font-family: '微軟正黑體';
+}
+.wrapper{
+	margin: 100px auto;
+    display: flex;
+    padding: 0 20px;
+    flex-flow: column;
+    text-align: center;
+    font-size: 30px;
+}
+.body{
+	padding: 10px 20px;
+	max-width: 200px;
+	margin: 0px auto;
+	border-radius: 5%;
+	border:1px solid gray;
+	background: #54eda6;
+	color: #b64242;
+}
+.body:hover{
+	cursor: pointer;
+}
+.img-tv{
+	background: url('./img.jpg') no-repeat;
+	background-size: contain;
+	background-position: center; 
+	height:450px;
+}
+.img-youtube{
+	background: url('./youtube.jpg') no-repeat;
+	background-size: contain;
+	background-position: center;
+	height:450px;
+}
+.img-plane{
+	background: url('./plane.png') no-repeat;
+	background: contain;
+	background-position: center;
+	height: 450px;
+}
+.wrapper h3{
+	padding: 50px;
+}
