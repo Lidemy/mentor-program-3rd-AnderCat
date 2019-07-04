@@ -5,7 +5,7 @@ TEXT 則通常是文章的儲存方式，沒有長度的限制。
 
 ## Cookie 是什麼？在 HTTP 這一層要怎麼設定 Cookie，瀏覽器又會以什麼形式帶去 Server？
 
-Cookie 是瀏覽器給予 Client 端的暫存識別證，用來辨識用戶身分，只認證不認人。
+Cookie 是由 Server 端發給瀏覽器的一段小型文字檔，可以用來辨別使用者的身分以及紀錄一些資料。
 
 瀏覽器可以在 Client 端發送 Request 的時候，檢查是否符合網站的設定，如果符合的話就會在 Header 裡夾帶 Cookie 發送到 Server 去。
 
