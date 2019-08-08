@@ -1,0 +1,167 @@
+*{
+	margin: 0px;
+	box-sizing: border-box;
+	font-family:'微軟正黑體';
+}
+.nav_right a:hover,.sub input:hover,.home:hover,.right a:hover{
+	cursor: pointer;
+	color:#29e826;
+}
+.container{
+	display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 42em;
+    margin:0 auto;
+}
+.nav{
+	background: blue;
+	position: fixed;
+	top:0;
+	left: 0;
+	right: 0;
+}
+.home{
+	color: white;
+    padding: 10px;
+    font-size: 22px;
+    display:inline-block;
+}
+.nav_right {
+	padding: 10px;
+	float:right;
+	font-size:22px;
+	color: white;
+}
+.right a{
+	float:right;
+	font-size:22px;
+	text-decoration: none;
+	margin-right: 5px;
+}
+.nav_right a{
+	color: white;
+}
+.nav_right p{
+	display: inline-block;
+	margin-right: 5px;
+}
+.user_message{
+	margin-top:2em; 
+	font-size:20px;
+	height:10em;
+	width:34em;
+	justify-content:start;
+}
+.user_sub_message{
+	margin:1em; 
+	font-size:20px;
+	height:8em;
+	width:26em;
+	justify-content:start;
+}
+.post button{
+	float:right;
+	margin-top:10px;
+	margin-right:3px;
+}
+.post-sub button{
+	float:right;
+	margin-top:-4em;
+	margin-right:4px;
+}
+.post-sub {
+	float: right;
+	background: #c1ffd4;
+	width: 37em;
+	margin:10px 0px;
+}
+.comment{
+	border:1px solid black;
+	margin:20px 0px;
+}
+.comment .name{
+	border-bottom:0.1px solid gray;
+	height:3em;
+	padding:10px;
+}
+.comment h3 , .sub-comments h3{
+	display:inline-block;
+	color:gray;
+}
+.comments{
+	background: #ffdc338a;
+	padding: 10px;
+	margin-top: 10px;
+}
+.sub-comments{
+
+}
+.sub-comment{
+	float: right;
+	background: #c1ffd4;
+	width: 37em;
+	margin:10px 0px;
+	border:1px solid black;
+	margin-bottom: 10px;
+}
+.sub-comments .name{
+	border-bottom:0.1px solid gray;
+	height:3em;
+	padding:10px;
+}
+
+pre{
+	padding:10px;
+	font-size:22px;
+	word-break:break-word;
+
+}
+
+.time {
+	font-size:12px;
+	float:right;
+	color:gray;
+}
+.register{
+	border-radius: 10%;
+	margin:10em auto;
+	padding:60px 50px;
+	width: 24em;
+	background: #d5d5d5;
+}
+input[type="text"]{
+	width: 20em;
+	height: 2em;
+	border-radius: 5%;
+	border:none;
+}
+input[type="password"]{
+	width: 20em;
+	height: 2em;
+	border-radius: 5%;
+	border:none;
+}
+.sub input[id="btn"]{
+	width: 20em;
+	border:none;
+	background: #00dcff;
+	border-radius: 5%;
+}
+.sub input[id="btn"]:hover{
+	cursor: pointer;
+	color: white;
+}
+.warning{
+	margin-top:4em;
+	white-space: nowrap;
+}
+.pages {
+		max-width: 500px;
+		margin:0px auto ;
+		padding-bottom: 70px;
+		text-align: center;
+	}
+.newSub{
+	text-align:center;
+}
