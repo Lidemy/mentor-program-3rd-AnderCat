@@ -1,0 +1,219 @@
+$font-size: 22px;
+$edit-font-size:20px;
+$font-color:white;
+$time-color:gray;
+$subcommentBkg:#c1ffd4;
+$inputBtn-color:#00dcff;
+@mixin point{
+	cursor: pointer;
+	color:#29e826;
+}
+.sub input:hover
+	+point
+
+input[id="btn"]:hover{
+	color:$font-color
+	+point
+}
+@mixin rightBtn{
+	float:right;
+	margin-right:5px;
+	margin-bottom:3px;
+}
+.edit_submit
+	+rightBtn
+.cancel
+	+rightBtn
+.sub_edit_submit
+	+rightBtn
+.sub_cancel{
+	@include rightBtn
+}
+
+@mixin inputType{
+	width: 20em;
+	height: 2em;
+	border-radius: 5%;
+	border:none;
+}
+input[type="text"]
+	+inputType
+input[type="password"]
+	+inputType
+input[id="btn"]{
+	@include inputType;
+	background: $inputBtn-color;
+}
+
+@mixin subsetting{
+	float: right;
+	background: $subcommentBkg;
+	width: 37em;
+	margin:10px 0px;
+}
+
+@mixin userMessage($margin,$height,$width){
+	margin:$margin; 
+	font-size:$edit-font-size;
+	height:$height;
+	width:$width;
+	justify-content:start;
+}
+
+body{
+	margin:0px;
+	box-sizing: border-box;
+	font-size: $font-size;
+	font-family: '微軟正黑體';
+}
+pre{
+	padding:10px;
+	font-size:$font-size!important;
+	word-break:break-word;
+	white-space: pre-line;
+}
+.container {
+	display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 720px!important;
+    margin:0 auto;
+    .warning {
+		margin-top: 2em;
+		white-space: nowrap;
+	}
+	.pages {
+		max-width: 500px;
+		margin:0px auto ;
+		padding-bottom: 70px;
+		text-align: center;
+	}
+}
+.post {
+	button {
+		float:right;
+		margin-top:10px;
+		margin-right:3px;
+	}
+}
+.user_message{
+	@include userMessage(2em,10em,33em)
+}
+
+
+.edit_message { 
+	font-size:$edit-font-size;
+	height:8em;
+	width:100%;
+	justify-content:start;
+}
+.comments {
+	background: #ffdc338a;
+	padding: 10px;
+	margin-top: 10px;
+}
+.comment {
+	border:1px solid black;
+	margin:20px 0px;
+	.name {
+		border-bottom:0.1px solid gray;
+		height:3em;
+		padding:10px;
+	}
+	h3 {
+		display:inline-block;
+		color:$time-color;
+	}
+}
+.sub-comments {
+	@extend .name;
+	.sub-comment{
+		@include subsetting;
+		border:1px solid black;
+		margin-bottom: 10px;
+		h3 {
+			display:inline-block;
+			color:gray;
+		}
+		.post-subs {
+			display:flow-root;
+			width: 100%;
+		}
+	}
+}
+.post-sub {
+	@include subsetting;
+	.newSub{
+		text-align:center;
+	}
+	button {
+		margin-top: -4em;
+	}
+	div {
+		text-align: center;
+	}
+	.user_sub_message{
+		@include userMessage(1em,8em,24em)
+	}
+}
+.register {
+	border-radius: 10%;
+	margin:10em auto;
+	padding:60px 50px;
+	width: 24em;
+	background: #d5d5d5;
+}
+.time {
+	font-size:12px;
+	float:right;
+	color:$time-color;
+}
+.hello{
+	display: inline-block;
+	margin-right: 15px;
+	color:$font-color;
+	font-size:$font-size;
+	margin-bottom: 0px;
+}
+.home {
+	color: $font-color;
+	font-size: $font-size;
+	display: inline-block;
+	:hover {
+		@include point;
+	}
+}
+.nav {
+	background: blue;
+	position: fixed;
+	top:0;
+	left: 0;
+	right: 0;
+	z-index:1;
+}
+.navbar a{
+	color:$font-color;
+	font-size:$font-size;
+	&:hover {
+		@include point;
+	}
+} 
+
+.right {
+	float:right;
+	font-size:$font-size;
+	text-decoration: none;
+	margin-right: 5px;
+	color:$font-color;
+	button {
+		margin-top: 10px;
+	}
+	&:hover {
+		@include point;
+	}
+}
+
+.btn-outline-success {
+	color:$font-color!important;
+	border:0 $font-color!important;
+}
