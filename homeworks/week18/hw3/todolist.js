@@ -29,15 +29,15 @@ function addTodo(value) {
   render();
 }
 
-function removeTodo(id) {
-  list = list.filter(item => item.id !== id);
+function removeTodo(dataId) {
+  list = list.filter(item => item.id !== dataId);
   render();
 }
 
 /* eslint-disable no-param-reassign */
-function checkTodo(id) {
+function checkTodo(dataId) {
   list.forEach((item) => {
-    if (item.id === id) {
+    if (item.id === dataId) {
       item.check = !item.check;
     }
   });
@@ -63,7 +63,7 @@ $(document).ready(() => {
         }
         break;
       case '刪除':
-        removeTodo(Number($(e.target).parent().parent().attr('id')));
+        removeTodo(e);
         break;
       default:
         break;
@@ -71,6 +71,7 @@ $(document).ready(() => {
   });
 
   $('.todo-list').change((e) => {
-    checkTodo(Number($(e.target).parent().parent().attr('id')));
+    const dataId = Number($(e.target).parent().parent().attr('id'));
+    checkTodo(dataId);
   });
 });
