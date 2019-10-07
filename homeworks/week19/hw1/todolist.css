@@ -1,0 +1,28 @@
+.container{
+	margin:150px auto;
+	max-width: 500px;
+
+}
+.col-md 6{
+	margin:0px auto;
+}
+.todo-list span{
+	margin-left: 50px;
+}
+
+.check-btn{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background: white;
+
+}
+.delete-line{
+	text-decoration: line-through;
+}
+.title{
+	font-size:32px;
+	text-align: center;
+	color:#00a1ff;
+	margin-bottom: 30px;
+}
