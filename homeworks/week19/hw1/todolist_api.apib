@@ -1,0 +1,91 @@
+FORMAT: 1A
+HOST:http://andercat.tw/todolist/
+
+# API Document
+
+# TodoList API
+簡單 CRUD 功能的 TodoList API
++ id : 待辦事項的編號 id
++ content : todo 的內容
++ status : todo 的狀態 ，1 代表未完成 ，0 代表完成
+
+## TodoList [/todo_method]
+
+### 獲取所有 todo [GET]
+
++ Response 200 (text/plain;charset=UTF-8)
+
+	[
+		{
+			"id":1,
+			"content":"new test",
+			"done":1
+		},
+		{
+			"id":2,
+			"content":"React",
+			"done":1
+		}
+	]
+
+### 獲取單筆 todo [GET /todo_method{?id}]
+
++ Parameters
+	+ id:`1` (integer,required) -取出資料的 id
+
++ Response 200 (text/plain;charset=UTF-8)
+
+	[
+		{
+			"id":1,
+			"content":"new test",
+			"done":1
+		}
+	]
+
+### 刪除單筆 todo [DELETE /todo_method{?id}]
+
++ Parameters
+	+ id:`1` (integer,required) -取出資料的 id
+
++ Response 200
+
+### 新增單筆 todo [POST /todo_method]
+
++ Request with body (application/json;charset=UTF-8)
+	
+	[
+		{
+			"content": "看書"
+		}
+	]
+
++ Response 200
+
+### 修改單筆 todo 內容 [PATCH /todo_method{?id}]
+
++ Request with body (application/json;charset=UTF-8)
+	
+	[
+		{
+			"id": "2",
+			"content": "看書"
+		}
+	]
+
++ Response 200
+
+### 修改單筆 todo 狀態 [PATCH /todo_method{?id}]
+
+修改 todo 為已完成或未完成
+
++ Request with body (application/json;charset=UTF-8)
+	
+	[
+		{
+			"id": "2",
+			"content": "看書"
+		}
+	]
+
++ Response 200

@@ -5,7 +5,8 @@
   "scripts": {
     "lint": "eslint ./homeworks/**/*.js",
     "test": "jest",
-    "scss": "node-sass --watch scss -o css"
+    "scss": "node-sass --watch scss -o css",
+    "mock": "mock"
   },
   "husky": {
     "hooks": {
@@ -37,6 +38,7 @@
     "@babel/core": "^7.4.4",
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.4.4",
+    "api-blueprint": "^0.1.8",
     "eslint": "^5.15.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.16.0",
