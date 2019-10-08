@@ -1,21 +1,33 @@
 const baseURL = '/todolist/todo_method.php';
+
+function escapeHtml(content) {
+  const map = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#039;',
+  };
+  return content.replace(/[&<>"']/g, m => map[m]);
+}
+
 function render(res) {
   $('.todo-list').empty();
   $('.todo-list').append(res.map(item => (item.done
     ? `<li class="list-group-item d-flex justify-content-between align-items-center" id="${item.id}">
     <div>
       <input type="checkbox" class="check-btn">
-      <label class="content">${item.content}</label>
+      <label class="content">${escapeHtml(item.content)}</label>
     </div>
     <div>
-      <button type="button" class="btn btn-success">編輯</button>
-      <button type="button" class="btn btn-danger">刪除</button>
+      <button type="button" class="btn btn-success edit-btn">編輯</button>
+      <button type="button" class="btn btn-danger del-btn">刪除</button>
     </div>
   </li>`
     : `<li class="list-group-item d-flex justify-content-between align-items-center list-group-item-success" id="${item.id}">
     <div>
       <input type="checkbox" class="check-btn" checked="checked">
-      <label class="s delete-line">${item.content}</label>
+      <label class="s delete-line">${escapeHtml(item.content)}</label>
     </div>
     <div>
       <button type="button" class="btn btn-danger">刪除</button>
@@ -23,7 +35,7 @@ function render(res) {
   </li>`)));
 }
 
-function GetAllTodo() {
+function getAllTodo() {
   $.ajax({
     type: 'GET',
     url: baseURL,
@@ -42,7 +54,7 @@ function addTodo(value) {
     },
   }).done(() => {
     $('.add-todo').val('');
-    GetAllTodo();
+    getAllTodo();
   });
 }
 
@@ -51,7 +63,7 @@ function removeTodo(dataId) {
     type: 'DELETE',
     url: `${baseURL}?id=${dataId}`,
   }).done(() => {
-    GetAllTodo();
+    getAllTodo();
   });
 }
 
@@ -60,7 +72,7 @@ function checkTodo(dataId) {
     type: 'PATCH',
     url: `${baseURL}?id=${dataId}`,
   }).done(() => {
-    GetAllTodo();
+    getAllTodo();
   });
 }
 
@@ -72,7 +84,7 @@ function updateTodo(dataId, value) {
       content: value,
     },
   }).done(() => {
-    GetAllTodo();
+    getAllTodo();
   });
 }
 
@@ -84,8 +96,9 @@ function editTodo(e, message) {
   $(e.target).html('送出');
 }
 
+
 $(document).ready(() => {
-  GetAllTodo();
+  getAllTodo();
   $('.add-todo').keydown((e) => {
     if (e.target.value === '') {
       e.stopPropagation();
@@ -94,37 +107,28 @@ $(document).ready(() => {
     }
   });
 
-  $('.row').click((e) => {
-    const element = e.target;
-    const dataId = Number($(e.target).closest('.list-group-item').attr('id'));
-    switch (element.innerHTML) {
-      case '新增':
-        if (($('.add-todo').val() !== '')) {
-          const content = $('.add-todo').val();
-          addTodo(content);
-        }
-        break;
-
-      case '刪除':
-        removeTodo(dataId);
-        break;
-
-      case '編輯': {
-        const message = $(e.target).parent().prev().children('.content')
-          .text();
-        editTodo(e, message);
-        break;
-      }
-
-      case '送出': {
-        const content = $('.edit-todo').val();
-        updateTodo(dataId, content);
-        break;
-      }
-
-      default:
-        break;
+  $('.row').on('click', '.add-btn', () => {
+    if (($('.add-todo').val() !== '')) {
+      const content = $('.add-todo').val();
+      addTodo(content);
     }
+  });
+
+  $('.row').on('click', '.edit-btn', (e) => {
+    const message = $(e.target).parent().prev().children('.content')
+      .text();
+    editTodo(e, message);
+  });
+
+  $('.row').on('click', '.del-btn', (e) => {
+    const dataId = Number($(e.target).closest('.list-group-item').attr('id'));
+    removeTodo(dataId);
+  });
+
+  $('.row').on('click', '.edit-todo', (e) => {
+    const content = $('.edit-todo').val();
+    const dataId = Number($(e.target).closest('.list-group-item').attr('id'));
+    updateTodo(dataId, content);
   });
 
   $('.todo-list').change((e) => {
