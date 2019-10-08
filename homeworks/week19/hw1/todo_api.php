@@ -11,7 +11,7 @@
       while($row = $result->fetch_assoc()) {
          $response = (object) [
            'id' => $row['id'],
-           'content' => htmlspecialchars($row['content']),
+           'content' => $row['content'],
            'done' => $row['done'],
          ];
          array_push($arr, $response);
@@ -35,7 +35,7 @@
       while($row = $result->fetch_assoc()) {
       	echo json_encode(array(
           'result' => 'success',
-          'content' => htmlspecialchars($row['content']),
+          'content' => $row['content'],
           'id' => $row['id'],
         ));
       }
