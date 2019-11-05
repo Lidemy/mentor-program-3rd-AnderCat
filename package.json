@@ -6,7 +6,9 @@
     "lint": "eslint ./homeworks/**/*.js",
     "test": "jest",
     "scss": "node-sass --watch scss -o css",
-    "mock": "mock"
+    "mock": "mock",
+    "start":"webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production"
   },
   "husky": {
     "hooks": {
